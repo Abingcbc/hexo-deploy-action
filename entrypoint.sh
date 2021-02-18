@@ -27,7 +27,7 @@ git checkout "${BRANCH}"
 
 echo "copy CNAME if exists"
 if [ -n "CNAME" ]; then
-  mv CNAME /root/
+  mv ./CNAME /root/
 fi
 
 git rm -r '*'
