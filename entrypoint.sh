@@ -36,12 +36,15 @@ if [ -f "/root/CNAME" ]; then
   mv /root/CNAME .
 fi
 
+rm -rf node_modules
+
 git add --all
 
 echo 'Start Commit'
 git commit --allow-empty -m "Deploying to ${BRANCH}"
 
 echo 'Start Push'
+git remote add origin "${GIT_REPO}"
 git push origin "${BRANCH}"
 
 echo "Deployment succesful!"
