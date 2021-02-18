@@ -44,7 +44,7 @@ echo 'Start Commit'
 git commit --allow-empty -m "Deploying to ${BRANCH}"
 
 echo 'Start Push'
-git remote add origin "${GIT_REPO}"
-git push origin "${BRANCH}"
+git remote add gitorigin "${GIT_REPO}"
+git push gitorigin "${BRANCH}"
 
 echo "Deployment succesful!"
