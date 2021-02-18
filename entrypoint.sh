@@ -11,13 +11,7 @@ ssh-keyscan -t rsa github.com >> /root/.ssh/known_hosts
 git config --global user.name "${USER_NAME}"
 git config --global user.email "${USER_EMAIL}"
 
-# check values
-if [ -n "${PUBLISH_REPOSITORY}" ]; then
-    PRO_REPOSITORY=${PUBLISH_REPOSITORY}
-else
-    PRO_REPOSITORY=${GITHUB_REPOSITORY}
-fi
-
+pwd
 ls
 
 echo "npm install ..." 
