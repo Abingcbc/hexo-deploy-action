@@ -26,13 +26,13 @@ git stash # never commit
 git checkout "${BRANCH}"
 
 echo "copy CNAME if exists"
-if [ -n "CNAME" ]; then
-  mv ./CNAME /root/
+if [ -f "CNAME" ]; then
+  mv CNAME /root/
 fi
 
 git rm -r '*'
 cp -r /root/public/. .
-if [ -n "/root/CNAME" ]; then
+if [ -f "/root/CNAME" ]; then
   mv CNAME .
 fi
 
