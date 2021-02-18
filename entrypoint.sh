@@ -33,7 +33,7 @@ fi
 git rm -r '*'
 cp -r /root/public/. .
 if [ -f "/root/CNAME" ]; then
-  mv CNAME .
+  mv /root/CNAME .
 fi
 
 git add --all
