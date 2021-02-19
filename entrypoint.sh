@@ -14,10 +14,13 @@ git config --global user.email "${USER_EMAIL}"
 echo "npm install ..." 
 npm install
 
-if [ -d 'themes/inside']; then
+cd themes
+if [ -d 'inside']; then
+  echo "install theme dependecy .."
   cd theme/inside && npm install
-  cd ../..
+  cd ..
 fi
+cd ..
 
 echo "Clean folder ..."
 ./node_modules/hexo/bin/hexo clean
