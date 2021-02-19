@@ -17,7 +17,7 @@ npm install
 cd themes
 if [ -d 'inside' ]; then
   echo "install theme dependecy .."
-  cd theme/inside && npm install
+  cd themes/inside && npm install
   cd ..
 fi
 cd ..
