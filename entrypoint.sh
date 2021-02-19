@@ -39,6 +39,13 @@ if [ -f "CNAME" ]; then
 fi
 
 git rm -r '*'
+
+if [ -d 'themes' ]; then
+  if [ -d 'inside' ]; then
+    rm -rf themes
+  fi
+fi
+
 cp -r /root/public/. .
 if [ -f "/root/CNAME" ]; then
   mv /root/CNAME .
