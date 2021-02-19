@@ -14,7 +14,7 @@ git config --global user.email "${USER_EMAIL}"
 echo "npm install ..." 
 npm install
 
-if [-d 'theme/inside']; then
+if [-d 'themes/inside']; then
   cd theme/inside && npm install
   cd ../..
 fi
