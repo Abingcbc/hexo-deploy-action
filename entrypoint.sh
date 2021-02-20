@@ -40,18 +40,17 @@ fi
 
 git rm -r '*'
 
-if [ -d 'themes' ]; then
-  if [ -d 'inside' ]; then
-    rm -rf themes
-  fi
-fi
-
 cp -r /root/public/. .
 if [ -f "/root/CNAME" ]; then
   mv /root/CNAME .
 fi
 
 rm -rf node_modules
+
+if [ -d 'themes' ]; then
+  echo "delete untracked themes"
+  rm -rf themes
+fi
 
 git add --all
 
